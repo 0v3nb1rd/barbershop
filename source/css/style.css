@@ -1,2 +1,112 @@
+@font-face {
+  font-family: "PT-Sansnarrow";
+  src: url("../fonts/ptsansnarrow.woff2") format("woff2"), url("../fonts/ptsansnarrow.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: "PT-Sansnarrow Bold";
+  src: url("../fonts/ptsansnarrowbold.woff2") format("woff2"), url("../fonts/ptsansnarrowbold.woff") format("woff");
+  font-display: swap; }
+
 body {
-  background-color: blue; }
+  min-width: 320px;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #f7f4f1;
+  font-style: normal;
+  background-color: #292929; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.page-header__logo {
+  height: 85px; }
+
+@media (min-width: 768px) {
+  .page-header__logo {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    height: 400px; } }
+
+@media (min-width: 1200px) {
+  .page-header__logo {
+    height: 648px; } }
+
+.main-nav {
+  margin: 0 auto;
+  width: 320px; }
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+@media (min-width: 768px) {
+  .main-nav {
+    width: auto;
+    margin: 0; }
+    .main-nav__wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      width: 640px;
+      margin: 0 auto; }
+  .site-list {
+    width: 570px; }
+  .user-list {
+    width: 60px; } }
+
+@media (min-width: 1200px) {
+  .main-nav__wrapper {
+    width: 960px; }
+  .site-list {
+    width: 780px; }
+  .user-list {
+    width: 160px; } }
+
+.stats {
+  width: 320px;
+  margin: 0 auto; }
+  .stats__header {
+    padding: 30px 40px 25px 40px; }
+  .stats__list {
+    width: 100%; }
+
+@media (min-width: 768px) {
+  .stats {
+    width: 640px;
+    margin-top: -185px; }
+    .stats__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+
+@media (min-width: 1200px) {
+  .stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 960px;
+    margin-top: -160px; }
+    .stats__header {
+      width: 240px; }
+    .stats__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 640px; } }
