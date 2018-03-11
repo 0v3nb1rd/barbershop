@@ -1,0 +1,18 @@
+.portfolio__items {
+
+}
+
+@media (min-width: $desktop-width) {
+  .portfolio__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .portfolio__item {
+    width: 320px;
+
+    &--month {
+      width: 100%;
+    }
+  }
+}

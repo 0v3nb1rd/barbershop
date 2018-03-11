@@ -1,0 +1,35 @@
+.page-footer {
+  width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    width: 640px;
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__contacts {
+      text-align: left;
+    }
+
+    &__social {
+      order: 3;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    width: 960px;
+
+    &__social {
+      text-align: center;
+      order: 0;
+    }
+  }
+}

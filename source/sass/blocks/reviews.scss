@@ -1,0 +1,39 @@
+.reviews {
+  width: 320px;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    display: flex;
+    flex-wrap: wrap;
+    width: 640px;
+
+    &__title {
+      text-align: left;
+    }
+
+    &__write {
+      margin-left: auto;
+    }
+
+    &__toggles {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    width: 960px;
+  }
+}

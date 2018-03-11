@@ -1,0 +1,38 @@
+.news {
+  width: 360px;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .news {
+    width: 640px;
+
+    &__title {
+      text-align: left;
+    }
+
+    &__list {
+      display: flex;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .news {
+    width: 960px;
+  }
+}
