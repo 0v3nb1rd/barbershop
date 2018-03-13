@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <title>Барбершоп "Бородинський"</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="page-header">
     <a class="page-header__logo">
-      <img class="page-header__logo-image" src="img/logo.svg" width="226" height="30" alt="Барбершоп Бородинський">
+      <img src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп Бородинський">
     </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
@@ -33,7 +34,9 @@
         </ul>
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
-            <a class="user-list__login" href="#">Войти</a>
+            <a class="user-list__login" href="#">
+              <img class="user-list__login-icon" src="img/login.png" width="16" height="16" alt="">Войти
+            </a>
           </li>
         </ul>
       </div>
@@ -217,5 +220,6 @@
       </div>
     </div>
   </footer>
+  <script src="js/mobile-nav.js"></script>
 </body>
 </html>
