@@ -48,7 +48,7 @@
     <section class="stats">
       <header class="stats__header">
         <h2 class="visually-hidden">Статистика Барбершопа</h2>
-        <b class="stats__slogan">Стрижка у нас это выгодно!</b>
+        <b class="stats__slogan">Стрижка у нас<br> это выгодно!</b>
         <p class="stats__intro">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
         <small class="stats__legend stats__legend--top">
           <sup>*</sup>
@@ -101,7 +101,12 @@
 
     <section class="advantages">
       <div class="advantages__wrapper slider">
-      <h2 class="visually-hidden">Наши преимущества</h2>
+        <h2 class="visually-hidden">Наши преимущества</h2>
+
+        <input class="slider__input slider__item-1" type="radio" id="advantages__btn-1" name="advantages" checked>
+        <input class="slider__input slider__item-2" type="radio" id="advantages__btn-2" name="advantages">
+        <input class="slider__input slider__item-3" type="radio" id="advantages__btn-3" name="advantages">
+
         <ul class="advantages__list slider__list">
           <li class="advantages__item advantages__item--fast slider__item">
             <h3 class="advantages__title">Быстро</h3>
@@ -117,77 +122,91 @@
           </li>
         </ul>
         <p class="advantages__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
+          <label class="slider__toggle slider__toggle-1" for="advantages__btn-1">1</label>
+          <label class="slider__toggle slider__toggle-2" for="advantages__btn-2">2</label>
+          <label class="slider__toggle slider__toggle-3" for="advantages__btn-3">3</label>
         </p>
       </div>
     </section>
 
     <section class="news">
       <div class="news__wrapper">
-      <h2 class="news__title">Новости и акции</h2>
+        <h2 class="news__title">Новости и акции</h2>
         <ul class="news__list">
           <li class="news__item">
             <time class="news__date" datetime="2018-03-01">
-              <b class="news__day">29</b>март
+              <b class="news__day">29</b><br>март
             </time>
             <p class="news__text">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
           </li>
 
           <li class="news__item">
             <time class="news__date" datetime="2018-02-20">
-              <b class="news__day">29</b>февр
+              <b class="news__day">29</b><br>февр
             </time>
             <p class="news__text">В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!</p>
           </li>
 
           <li class="news__item">
             <time class="news__date" datetime="2018-01-01">
-              <b class="news__day">29</b>янв
+              <b class="news__day">29</b><br>янв
             </time>
             <p class="news__text">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</p>
           </li>
-          <a class="news__to-all button" href="#">Показать все</a>
+
+          <li class="news__item">
+            <time class="news__date" datetime="2018-01-01">
+              <b class="news__day">29</b><br>янв
+            </time>
+            <p class="news__text">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</p>
+          </li>
         </ul>
+        <a class="news__all-btn button" href="#">Показать все</a>
       </div>
     </section>
 
     <section class="reviews">
-      <h2 class="reviews__title">Отзывы о нас</h2>
-      <a class="reviews__write button" href="#">Оставить свой</a>
-      <div class="reviews__list slider__list">
-        <blockquote class="reviews__item slider__item">
-          <p class="reviews__author-picture">
-            <img class="reviews__author-image" src="#" width="50" height="33" alt="Фото Тревиса">
-          </p>
-          <cite class="reviews__author-name">Тревис Баркер</cite>
-          <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
-        </blockquote>
+      <div class="reviews__wrapper slider">
+        <h2 class="reviews__title">Отзывы о нас</h2>
+        <a class="reviews__write button" href="#">Оставить свой</a>
 
-        <blockquote class="reviews__item slider__item">
-          <p class="reviews__author-picture">
-            <img class="reviews__author-image" src="#" width="50" height="33" alt="Фото Тревиса">
-          </p>
-          <cite class="reviews__author-name">Тревис Баркер</cite>
-          <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
-        </blockquote>
+        <input class="slider__input slider__item-1" type="radio" id="reviews__btn-1" name="reviews" checked>
+        <input class="slider__input slider__item-2" type="radio" id="reviews__btn-2" name="reviews">
+        <input class="slider__input slider__item-3" type="radio" id="reviews__btn-3" name="reviews">
 
-        <blockquote class="reviews__item slider__item">
-          <p class="reviews__author-picture">
-            <img class="reviews__author-image" src="#" width="50" height="33" alt="Фото Тревиса">
-          </p>
-          <cite class="reviews__author-name">Тревис Баркер</cite>
-          <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
-        </blockquote>
-        <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-        <button class="reviews__next" type="button">Следующий отзыв</button>
+        <div class="reviews__list slider__list">
+          <blockquote class="reviews__item slider__item">
+            <p class="reviews__author-picture">
+              <img class="reviews__author-image" src="img/travis-mobile.png" width="50" height="33" alt="Фото Тревиса">
+            </p>
+            <cite class="reviews__author-name">Тревис Баркер</cite>
+            <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+          </blockquote>
+
+          <blockquote class="reviews__item slider__item">
+            <p class="reviews__author-picture">
+              <img class="reviews__author-image" src="img/travis-mobile.png" width="50" height="33" alt="Фото Тревиса">
+            </p>
+            <cite class="reviews__author-name">Тревис Баркер</cite>
+            <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+          </blockquote>
+
+          <blockquote class="reviews__item slider__item">
+            <p class="reviews__author-picture">
+              <img class="reviews__author-image" src="img/travis-mobile.png" width="50" height="33" alt="Фото Тревиса">
+            </p>
+            <cite class="reviews__author-name">Тревис Баркер</cite>
+            <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+          </blockquote>
+          <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+          <button class="reviews__next" type="button">Следующий отзыв</button>
+        </div>
+        <p class="reviews__toggles slider__toggles">
+          <label class="slider__toggle" for="reviews__btn-1">1</label>
+          <label class="slider__toggle" for="reviews__btn-2">2</label>
+          <label class="slider__toggle" for="reviews__btn-3">3</label>
+        </p>
       </div>
-      <p class="reviews__toggles slider__toggles">
-        <button class="slider__toggle" type="button">1</button>
-        <button class="slider__toggle" type="button">2</button>
-        <button class="slider__toggle" type="button">3</button>
-      </p>
     </section>
   </main>
 
@@ -197,7 +216,7 @@
         <b class="contacts__title">Барбершоп Бородинский</b>
         <p class="contacts__text">
           г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
-          <a class="contacts__phone" href="tel:+78125556666"><span class="contacts__phone-mobile">Тел.:</span>+7 (812) 555-66-66</a>
+          <a class="contacts__phone" href="tel:+78125556666"><span class="contacts__phone-mobile">Тел:</span>+7 (812) 555-66-66</a>
         </p>
       </div>
 
@@ -205,13 +224,13 @@
         <b class="social__title">Давайте дружить!</b>
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="#">Мы Вконтакте</a>
+            <a class="social__link social__link--vkontakte" href="#"><span class="visually-hidden">Мы Вконтакте</span></a>
+          </li>
+            <li class="social__item">
+            <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы Вконтакте</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">Мы Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="#">Мы Вконтакте</a>
+            <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Мы Вконтакте</span></a>
           </li>
         </ul>
       </div>

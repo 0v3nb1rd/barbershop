@@ -1,0 +1,20 @@
+.button {
+  display: inline-block;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid $bd_btn;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    width: 160px;
+  }
+}

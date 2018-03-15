@@ -1,0 +1,52 @@
+.slider {
+  &__input {
+    display: none;
+  }
+
+  // &__item {
+  //   display: none;
+  // }
+
+  &__toggles {
+    text-align: center;
+  }
+
+  &__toggle {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 23px;
+    box-shadow: inset 0 0 0 2px #989898;
+    transform: rotate(-45deg);
+    font-size: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+#advantages__btn-1:checked ~ .slider__list .advantages__item--fast,
+#advantages__btn-2:checked ~ .slider__list .advantages__item--cool,
+#advantages__btn-3:checked ~ .slider__list .advantages__item--price,
+#reviews__btn-1:checked ~ .slider__list .slider__item:nth-child(1),
+#reviews__btn-2:checked ~ .slider__list .slider__item:nth-child(2),
+#reviews__btn-3:checked ~ .slider__list .slider__item:nth-child(3) {
+  display: block;
+}
+
+#advantages__btn-1:checked ~ .slider__toggles label[for="advantages__btn-1"],
+#advantages__btn-2:checked ~ .slider__toggles label[for="advantages__btn-2"],
+#advantages__btn-3:checked ~ .slider__toggles label[for="advantages__btn-3"] {
+  background-color: #fff;
+}
+
+#reviews__btn-1:checked ~ .slider__toggles label[for="reviews__btn-1"],
+#reviews__btn-2:checked ~ .slider__toggles label[for="reviews__btn-2"],
+#reviews__btn-3:checked ~ .slider__toggles label[for="reviews__btn-3"] {
+  background-color: #000;
+}
+
+@media (min-width: $tablet-width) {
+
+}

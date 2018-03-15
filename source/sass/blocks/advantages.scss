@@ -1,10 +1,12 @@
 .advantages {
-  width: 320px;
-  margin: 0 auto;
+  // width: 320px;
+  // margin: 0 auto;
+  width: auto;
 
   &__wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    // padding-bottom: 80px;
     text-align: center;
   }
 
@@ -13,25 +15,132 @@
     padding: 0;
     list-style: none;
   }
+
+  &__item {
+    display: none;
+    position: relative;
+    padding-top: 140px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 100px;
+      height: 100px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  &__item--fast {
+    &::before {
+      background-image: url("../img/advantage-1-illustration.svg");
+    }
+  }
+
+  &__item--cool {
+    &::before {
+      background-image: url("../img/advantage-2-illustration.svg");
+    }
+  }
+
+  &__item--price {
+    &::before {
+      background-image: url("../img/advantage-3-illustration.svg");
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    // padding-top: 145px;
+
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 400;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .advantages {
-    width: 640px;
+    // width: 640px;
+
+    &__wrapper {
+      width: 84%;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
 
     &__list {
       text-align: left;
+    }
+
+    &__item {
+      display: block;
+      padding-left: 140px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+
+      &::before {
+        left: 0;
+        top: 50%;
+        transform: translatey(-50%);
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &__toggles {
+      display: none;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .advantages {
-    width: 960px;
+    // width: 960px;
+
+    &__wrapper {
+      padding-top: 75px;
+      padding-bottom: 110px;
+    }
 
     &__list {
       display: flex;
       text-align: center;
+    }
+
+    &__item {
+      padding-top: 140px;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 0;
+      border-bottom: none;
+
+      &::before {
+        top: 0;
+        left: 50%;
+        transform: translatex(-50%);
+      }
     }
   }
 }
