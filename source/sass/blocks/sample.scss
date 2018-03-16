@@ -1,0 +1,183 @@
+.sample {
+  &__photo {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__photo picture {
+    display: block;
+    background-color: #e5ddd5;
+  }
+
+  &__photo picture img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__best {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    display: block;
+    width: 175px;
+    height: 50px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #826550;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    padding: 20px 0;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0 20px;
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: bold;
+  }
+
+  &__description {
+    margin: 0;
+    padding: 20px;
+    font-size: 19px;
+    line-height: 27px;
+    font-weight: normal;
+  }
+
+  &__services {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__service {
+    position: relative;
+    margin-left: 20px;
+    margin-right: 25px;
+    margin-top: 20px;
+  }
+
+  &__service-pic {
+    display: block;
+    vertical-align: middle;
+    padding-left: 35px;
+
+    font-size: 16px;
+    line-height: 27px;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 46px;
+      height: 22px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__service-pic--cut {
+    &::before {
+      background-image: url("../img/scissors-icon.svg");
+    }
+  }
+
+  &__service-pic--beard {
+    &::before {
+      background-image: url("../img/beard-icon.svg");
+    }
+  }
+
+  &__service-pic--mustanche {
+      padding-left: 50px;
+    &::before {
+      background-image: url("../img/mustache-icon.svg");
+
+      background-position: 50%;
+      background-size: contain;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .sample {
+    display: flex;
+    box-shadow: inset 0px 0px 0px 1px rgba(229,221,213,1);
+    &__photo {
+      display: inline-block;
+      width: 270px;
+    }
+    &__best {
+      top: 35px;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      width: 370px;
+      flex-grow: 1;
+      padding-left: 40px;
+      padding-right: 50px;
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+
+    &__services {
+      margin-top: auto;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .sample {
+    position: relative;
+
+    &__photo {
+      position: static;
+      width: auto;
+    }
+
+    &__best {
+      top: 25px;
+      left: auto;
+      right: 0;
+    }
+
+    &__info {
+      width: auto;
+      padding: 30px;
+    }
+
+    &__title {
+      padding: 0;
+    }
+
+    &__description {
+      padding: 0;
+      margin-top: 25px;
+      font-size: 18px;
+    }
+
+    &__service {
+      margin-left: 0;
+    }
+
+    &__photo picture img {
+      width: 100%;
+    }
+  }
+}

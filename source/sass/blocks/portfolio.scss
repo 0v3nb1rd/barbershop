@@ -2,17 +2,42 @@
 
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $tablet-width) {
   .portfolio__items {
-    display: flex;
-    flex-wrap: wrap;
+    padding-bottom: 35px;
   }
 
   .portfolio__item {
-    width: 320px;
+    margin-bottom: 40px;
 
-    &--month {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .portfolio {
+
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: 293px;
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+
+    &__item--month {
       width: 100%;
+      flex-direction: row;
+      margin-bottom: 40px;
+    }
+    &__information {
+      padding-left: 30px;
     }
   }
 }

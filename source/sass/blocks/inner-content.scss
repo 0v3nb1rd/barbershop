@@ -1,6 +1,13 @@
 .inner-content {
-  width: 320px;
-  margin: 0 auto;
+  // width: 320px;
+  // margin: 0 auto;
+  width: auto;
+  color: #000000 ;
+  background-color: $bg_lightgrey;
+
+  &__header {
+    padding: 30px;
+  }
 
   &__wrapper {
     padding-left: 20px;
@@ -8,7 +15,11 @@
   }
 
   &__title {
+    margin: 0;
     text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
   }
 
   &__home-btn {
@@ -18,18 +29,24 @@
 
 @media (min-width: $tablet-width) {
   .inner-content {
-    width: 640px;
+    // width: 640px;
 
     &__wrapper {
       padding: 0;
+      width: 84%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     &__header {
       display: flex;
+      padding: 40px 0;
     }
 
     &__title {
+      align-self: center;
       text-align: left;
+      font-size: 40px;
     }
 
     &__home-btn {
@@ -41,6 +58,10 @@
 
 @media (min-width: $desktop-width) {
   .inner-content {
-    width: 960px;
+    // width: 960px;
+
+    &__header {
+      padding-bottom: 85px;
+    }
   }
 }
