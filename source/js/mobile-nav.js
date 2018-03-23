@@ -1,6 +1,6 @@
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
-
+// console.log('Hello');
 navMain.classList.remove('main-nav--nojs');
 
 navToggle.addEventListener('click', function() {
