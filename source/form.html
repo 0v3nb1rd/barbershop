@@ -9,21 +9,25 @@
 </head>
 <body>
   <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="img/logo.svg" width="226" height="30" alt="Барбершоп Бородинський">
+    <a class="page-header__logo page-header__logo--inner" href="index.html">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+        <img class="page-header__logo-img" src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп Бородинський">
+      </picture>
     </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item">
+          <li class="site-list__item ">
             <a href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
             <a href="photo.html">Наши работы</a>
           </li>
           <li class="site-list__item site-list__item--active">
-            <a href="form.html">Записатся</a>
+            <a>Записатся</a>
           </li>
           <li class="site-list__item">
             <a href="#">Контакты</a>
@@ -34,7 +38,12 @@
         </ul>
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
-            <a class="user-list__login" href="#">Войти</a>
+            <a class="user-list__login" href="#">
+              <svg class="user-list__login-icon" width="16" height="16">
+                <use xlink:href="img/sprite.svg#login-ico"></use>
+              </svg>
+              Войти
+            </a>
           </li>
         </ul>
       </div>
@@ -61,105 +70,165 @@
               <input class="order__text" type="email" name="email" placeholder="Контактный e-mail">
             </div>
             <div class="order__subgroup">
-              <textarea class="order__message" name="message" placeholder="Доп. информация для мастера"></textarea>
+              <textarea class="order__text order__message" name="message" placeholder="Доп. информация для мастера"></textarea>
             </div>
           </div>
           <div class="order__group order__group--model">
             <h2 class="order__title">ВЫберите модель бороды:</h2>
-            <input class="order__radio" id="admiral" type="radio" name="beard" checked>
-            <label class="order__label" for="admiral">
-              <span class="order__name">адмирал</span>
-              <svg></svg>
-            </label>
 
-            <input class="order__radio" id="lumberjack" type="radio" name="beard">
-            <label class="order__label" for="lumberjack">
-              <span class="order__name">лесоруб</span>
-              <svg></svg>
-            </label>
+            <ul class="order__board-list">
+              <li class="order__board-item">
+                <input class="order__radio visually-hidden" id="admiral" type="radio" name="beard" checked>
+                <label class="order__label order__label--radio" for="admiral">
+                  <span class="order__name">адмирал</span>
+                  <svg class="order__icon" width="60" height="70">
+                    <use xlink:href="img/sprite.svg#beard-1"></use>
+                  </svg>
+                </label>
+              </li>
 
-            <input class="order__radio" id="polarexplorer" type="radio" name="beard">
-            <label class="order__label" for="polarexplorer">
-              <span class="order__name">полярник</span>
-              <svg></svg>
-            </label>
+              <li class="order__board-item">
+                <input class="order__radio visually-hidden" id="lumberjack" type="radio" name="beard">
+                <label class="order__label order__label--radio" for="lumberjack">
+                  <span class="order__name">лесоруб</span>
+                  <svg class="order__icon" width="60" height="70">
+                    <use xlink:href="img/sprite.svg#beard-2"></use>
+                  </svg>
+                </label>
+              </li>
 
-            <input class="order__radio" id="boyar" type="radio" name="beard">
-            <label class="order__label" for="boyar">
-              <span class="order__name">боярин</span>
-              <svg></svg>
-            </label>
+              <li class="order__board-item">
+                <input class="order__radio visually-hidden" id="polarexplorer" type="radio" name="beard">
+                <label class="order__label order__label--radio" for="polarexplorer">
+                  <span class="order__name">полярник</span>
+                  <svg class="order__icon" width="60" height="70">
+                    <use xlink:href="img/sprite.svg#beard-3"></use>
+                  </svg>
+                </label>
+              </li>
 
-            <input class="order__radio" id="sage" type="radio" name="beard">
-            <label class="order__label" for="sage">
-              <span class="order__name">мудрец</span>
-              <svg></svg>
-            </label>
+              <li class="order__board-item">
+                <input class="order__radio visually-hidden" id="boyar" type="radio" name="beard">
+                <label class="order__label order__label--radio" for="boyar">
+                  <span class="order__name">боярин</span>
+                  <svg class="order__icon" width="60" height="70">
+                    <use xlink:href="img/sprite.svg#beard-4"></use>
+                  </svg>
+                </label>
+              </li>
+
+              <li class="order__board-item">
+                <input class="order__radio visually-hidden" id="sage" type="radio" name="beard">
+                <label class="order__label order__label--radio" for="sage">
+                  <span class="order__name">мудрец</span>
+                  <svg class="order__icon" width="60" height="70">
+                    <use xlink:href="img/sprite.svg#beard-5"></use>
+                  </svg>
+                </label>
+              </li>
+            </ul>
+
           </div>
           <div class="order__group order__group--addit">
             <h2 class="order__title">Дополнительные услуги:</h2>
-            <input class="order__checkbox" id="paint" type="checkbox" name="paint" checked>
-            <label class="order__label" for="paint">
-              Подкрасить бороду
-            </label>
-            <input class="order__checkbox" id="screw" type="checkbox" name="screw" checked>
-            <label class="order__label" for="screw">
-              Накрутить усы
-            </label>
-            <input class="order__checkbox" id="comb" type="checkbox" name="comb">
-            <label class="order__label" for="comb">
-              Причесать бороду
-            </label>
-            <input class="order__checkbox" id="align" type="checkbox" name="align">
-            <label class="order__label" for="align">
-              Подровнять виски
-            </label>
-            <input class="order__checkbox" id="tidy" type="checkbox" name="tidy">
-            <label class="order__label" for="tidy">
-              Убрать седину
-            </label>
-            <input class="order__checkbox" id="polish" type="checkbox" name="polish">
-            <label class="order__label" for="polish">
-              Отполировать лысину
-            </label>
+            <ul class="order__checkbox-list">
+              <li class="order__checkbox-item">
+                <input class="order__checkbox visually-hidden" id="paint" type="checkbox" name="paint" checked>
+                <label class="order__label order__label--check" for="paint">
+                  Подкрасить бороду
+                </label>
+              </li>
+              <li class="order__checkbox-item">
+                <input class="order__checkbox visually-hidden" id="screw" type="checkbox" name="screw" checked>
+                <label class="order__label order__label--check" for="screw">
+                  Накрутить усы
+                </label>
+              </li>
+
+              <li class="order__checkbox-item">
+                <input class="order__checkbox visually-hidden" id="comb" type="checkbox" name="comb">
+                <label class="order__label order__label--check" for="comb">
+                  Причесать бороду
+                </label>
+              </li>
+
+              <li class="order__checkbox-item">
+                <input class="order__checkbox visually-hidden" id="align" type="checkbox" name="align">
+                <label class="order__label order__label--check" for="align">
+                  Подровнять виски
+                </label>
+              </li>
+
+              <li class="order__checkbox-item">
+                <input class="order__checkbox visually-hidden" id="tidy" type="checkbox" name="tidy">
+                <label class="order__label order__label--check" for="tidy">
+                  Убрать седину
+                </label>
+              </li>
+
+              <li class="order__checkbox-item">
+                <input class="order__checkbox visually-hidden" id="polish" type="checkbox" name="polish">
+                <label class="order__label order__label--check" for="polish">
+                  Отполировать лысину
+                </label>
+              </li>
+            </ul>
+
           </div>
           <button class="order__btn button" type="submit">Отправить заявку</button>
         </form>
       </div>
-      <svg></svg>
+      <!-- <svg></svg> -->
     </section>
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <div class="page-footer__contacts contacts">
-        <b class="contacts__title">Барбершоп Бородинский</b>
-        <p class="contacts__text">
-          г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
-          <a class="contacts__phone" href="tel:+78125556666"><span class="contacts__phone-mobile">Тел.:</span>+7 (812) 555-66-66</a>
-        </p>
-      </div>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__contacts contacts">
+          <b class="contacts__title">Барбершоп Бородинский</b>
+          <p class="contacts__text">
+            г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
+            <a class="contacts__phone" href="tel:+78125556666"><span class="contacts__phone-mobile">Тел:</span>+7 (812) 555-66-66</a>
+          </p>
+        </div>
 
-      <div class="page-footer__social social">
-        <b class="social__title">Давайте дружить!</b>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="#">Мы Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">Мы Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="#">Мы Вконтакте</a>
-          </li>
-        </ul>
-      </div>
+        <div class="page-footer__social social">
+          <b class="social__title">Давайте дружить!</b>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="#">
+                <span class="visually-hidden">Мы Вконтакте</span>
+                <svg class="social__icon social__icon--vk" width="45" height="45">
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+              <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">
+                <span class="visually-hidden">Мы Вконтакте</span>
+                <svg class="social__icon social__icon--fb" width="45" height="45">
+                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#">
+                <span class="visually-hidden">Мы Вконтакте</span>
+                <svg class="social__icon social__icon--insta" width="45" height="45">
+                  <use xlink:href="img/sprite.svg#icon-insta"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link button" href="#">Js Academy</a>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано:</b>
+          <a class="copyright__link button" href="#">Js Academy</a>
+        </div>
       </div>
-    </div>
   </footer>
+  <script src="js/mobile-nav.js"></script>
+
 </body>
 </html>

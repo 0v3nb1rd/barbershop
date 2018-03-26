@@ -3,7 +3,8 @@
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
-  border: 1px solid $bd_btn;
+  outline: 1px solid $bd_btn;
+  font-family: inherit;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
@@ -11,6 +12,17 @@
   text-transform: uppercase;
   color: #000000;
   cursor: pointer;
+
+  &:hover,
+  &:active {
+    outline-color: #d5c9bd;
+  }
+
+  &:active {
+    outline-color: $bd_btn;
+    background-color: #d5c9bd;
+    color: rgba(0,0,0,0.3)
+  }
 }
 
 @media (min-width: $tablet-width) {

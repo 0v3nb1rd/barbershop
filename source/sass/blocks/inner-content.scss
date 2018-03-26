@@ -1,17 +1,18 @@
 .inner-content {
-  // width: 320px;
-  // margin: 0 auto;
   width: auto;
   color: #000000 ;
   background-color: $bg_lightgrey;
 
   &__header {
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   &__wrapper {
+    // position: relative;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 60px;
   }
 
   &__title {
@@ -33,6 +34,7 @@
 
     &__wrapper {
       padding: 0;
+      padding-bottom: 90px;
       width: 84%;
       max-width: 1200px;
       margin: 0 auto;
@@ -59,6 +61,10 @@
 @media (min-width: $desktop-width) {
   .inner-content {
     // width: 960px;
+
+    &__wrapper {
+      padding-bottom: 55px;
+    }
 
     &__header {
       padding-bottom: 85px;

@@ -39,7 +39,10 @@
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
             <a class="user-list__login" href="#">
-              <img class="user-list__login-icon" src="img/login.png" width="16" height="16" alt="">Войти
+              <svg class="user-list__login-icon" width="16" height="16">
+                <use xlink:href="img/sprite.svg#login-ico"></use>
+              </svg>
+              Войти
             </a>
           </li>
         </ul>
@@ -181,7 +184,11 @@
         <div class="reviews__list slider__list">
           <blockquote class="reviews__item slider__item">
             <p class="reviews__author-picture">
-              <img class="reviews__author-image" src="img/travis-mobile.png" width="50" height="33" alt="Фото Тревиса">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/travis-desktop.jpg">
+                <source media="(min-width: 768px)" srcset="img/travis-tablet.png">
+                <img class="reviews__author-image" src="img/travis-mobile.png" alt="Фото Тревиса">
+              </picture>
             </p>
             <cite class="reviews__author-name">Тревис Баркер</cite>
             <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
@@ -228,13 +235,28 @@
         <b class="social__title">Давайте дружить!</b>
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="#"><span class="visually-hidden">Мы Вконтакте</span></a>
+            <a class="social__link social__link--vkontakte" href="#">
+              <span class="visually-hidden">Мы Вконтакте</span>
+              <svg class="social__icon social__icon--vk" width="45" height="45">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
           </li>
             <li class="social__item">
-            <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы Вконтакте</span></a>
+            <a class="social__link social__link--facebook" href="#">
+              <span class="visually-hidden">Мы Вконтакте</span>
+              <svg class="social__icon social__icon--fb" width="45" height="45">
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
+              </svg>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Мы Вконтакте</span></a>
+            <a class="social__link social__link--instagram" href="#">
+              <span class="visually-hidden">Мы Вконтакте</span>
+              <svg class="social__icon social__icon--insta" width="45" height="45">
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
