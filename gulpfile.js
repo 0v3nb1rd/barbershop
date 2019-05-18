@@ -1,5 +1,3 @@
-"use strict";
-
 var gulp = require("gulp");
 var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
@@ -51,9 +49,9 @@ gulp.task("html", function() {
   .pipe(gulp.dest("build"));
 });
 
-gulp.task("build", function(done) {
-  run("delate", "copy", "style", "sprite", "html", done);
-});
+// gulp.task("build", function(done) {
+//   run("delate", "copy", "style", "sprite", "html", done);
+// });
 
 gulp.task("image", function() {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
@@ -73,7 +71,7 @@ gulp.task("webp", function() {
 /////////////////////////////////////////////////////
 
 gulp.task("style", function() {
-  gulp.src("source/sass/style.scss")
+  return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sass({
       includePaths: require('node-normalize-scss').includePaths
@@ -97,6 +95,9 @@ gulp.task("serve", function() {
     ui: false
   });
 
-  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("source/*.html", ["html"]).on("change", server.reload);
+  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("style"));
+  gulp.watch("source/*.html", gulp.series("html")).on("change", server.reload);
 });
+
+gulp.task('build', gulp.series("delate", "copy", "style", "sprite", "html"));
+gulp.task('default', gulp.series("build", "serve"));
